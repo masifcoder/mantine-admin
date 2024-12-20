@@ -18,8 +18,8 @@ function Sidenav() {
 
 
   return (
-    <div className='p-4'>
-        <div className='flex gap-3 justify-cente mb-10'>
+    <div className=''>
+        <div className='flex gap-3 justify-cente mb-10 px-10'>
             <Cookie /> <span className='font-bold text-red-500'>CookieBlog</span>
         </div>
 
@@ -28,8 +28,8 @@ function Sidenav() {
             {
               Links.map( (link, index) => {
                 return (
-                  <li onClick={() => makeActive(index)} key={index} className={` p-3 rounded ps-3 text-gray-600 ${ (activeLink == index) ? "bg-red-200 border-s-2 border-s-red-800 text-gray-500": '' }  `}>
-                    <NavLink to={link.path} className='flex gap-2' >  <span>{link.icon}</span> {link.title}  </NavLink>
+                  <li onClick={() => makeActive(index)} key={index} className={`py-4 px-6 rounded ps-3 text-gray-600 ${ (activeLink == index) ? "bg-[#DA498D] border-s-3 border-s-[#510f2e] text-white": '' }  `}>
+                    <NavLink to={link.path} className='flex gap-2 w-full' >  <span>{link.icon}</span> {link.title}  </NavLink>
                   </li>
                 )
               })
