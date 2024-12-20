@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import Home from './pages/Home';
 import Layout from './layouts/Layout';
 import Posts from './pages/Posts';
+import Notfound from './pages/Notfound';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='posts' element={<Posts />} />
+            <Route path='*' element={<Notfound />} />
         </Route>
       </Routes>
     </>
